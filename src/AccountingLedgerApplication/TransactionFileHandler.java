@@ -39,7 +39,8 @@ public class TransactionFileHandler {
     }
 
     public void saveTransaction(Transaction transaction) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true))) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
             writer.write(transaction.toCsvFormat());
             writer.newLine();
         } catch (IOException e) {
