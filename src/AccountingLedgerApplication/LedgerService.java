@@ -30,7 +30,7 @@ public class LedgerService {
         }
     }
 
-    public void dispalyDeposits(){
+    public void displayDeposits(){
         sortTransactions();
         for(Transaction transaction : transactions){
             if(transaction.getAmount() > 0){

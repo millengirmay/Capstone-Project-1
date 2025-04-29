@@ -42,4 +42,8 @@ public class Transaction {
         return date + "|" + time + "|" + description + "|" + vendor + "|" + amount;
      }
 
+     public String toCsvFormat(){
+        return date + "|" + time + "|" + description + "|" + vendor + "|" + amount;
+     }
+
 }
