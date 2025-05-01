@@ -49,7 +49,7 @@ Access the Reports Menu to generate various reports or perform searches.
 
 The customSearch method allows users to filter transactions based on multiple optional criteria. Here's a simplified version:
 
-    //private static void customSearch(Scanner scanner, ArrayList<Transaction> transactions) {
+    private static void customSearch(Scanner scanner, ArrayList<Transaction> transactions) {
  
         // Prompt user for search criteria
     
@@ -58,6 +58,6 @@ The customSearch method allows users to filter transactions based on multiple op
         // Iterate through transactions and apply filters
     
         // Display matching transactions
-    //}
+    }
 
 
