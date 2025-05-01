@@ -13,7 +13,7 @@ public class LedgerApplication {
 
         boolean options = true;
         while (options) {
-            System.out.println("\n==== Home Screen ====");
+            System.out.println("\n====== Home Screen ======");
             System.out.println("D) Add Deposit");
             System.out.println("P) Make Payment (Debit)");
             System.out.println("L) Ledger");
@@ -70,7 +70,7 @@ public class LedgerApplication {
             System.out.println("P) Payments Only");
             System.out.println("R) Reports");
             System.out.println("H) Home");
-            System.out.print("Choose an option: ");
+            System.out.println("Choose an option: ");
             String choice = scanner.nextLine();
 
             switch (choice.toUpperCase()) {

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class ReportService {
     public void monthToDate(ArrayList<Transaction> transactions){
+        System.out.println("========**** Month to Date Transactions ****=======\n");
         LocalDate now = LocalDate.now();
         for(Transaction t: transactions){
             if(t.getDate().getMonth().equals(now.getMonth()) && t.getDate().getYear() == now.getYear()){
@@ -13,6 +14,7 @@ public class ReportService {
         }
     }
     public void previousMonth(ArrayList<Transaction> transactions){
+        System.out.println("========**** Previous month Transactions ****=======\n");
         LocalDate now = LocalDate.now();
         LocalDate previousMonth = now.minusMonths(1);
         for(Transaction t: transactions){
