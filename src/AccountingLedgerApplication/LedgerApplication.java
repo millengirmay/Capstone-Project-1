@@ -23,11 +23,11 @@ public class LedgerApplication {
 
             switch (choice.toUpperCase()) {
                 case "D":
-                    System.out.print("Enter description: ");
+                    System.out.println("Enter description: ");
                     String descriptionD = scanner.nextLine();
-                    System.out.print("Enter vendor: ");
+                    System.out.println("Enter vendor: ");
                     String vendorD = scanner.nextLine();
-                    System.out.print("Enter amount: ");
+                    System.out.println("Enter amount: ");
                     double amountD = Double.parseDouble(scanner.nextLine());
                     Transaction deposit = new Transaction(LocalDate.now(), LocalTime.now(), descriptionD, vendorD, amountD);
                     ledgerService.addDeposit(deposit);
@@ -35,11 +35,11 @@ public class LedgerApplication {
                     break;
 
                 case "P":
-                    System.out.print("Enter description: ");
+                    System.out.println("Enter description: ");
                     String descriptionP = scanner.nextLine();
-                    System.out.print("Enter vendor: ");
+                    System.out.println("Enter vendor: ");
                     String vendorP = scanner.nextLine();
-                    System.out.print("Enter amount: ");
+                    System.out.println("Enter amount: ");
                     double amountP = Double.parseDouble(scanner.nextLine());
                     Transaction payment = new Transaction(LocalDate.now(), LocalTime.now(), descriptionP, vendorP, -amountP);
                     ledgerService.addPayment(payment);
@@ -106,7 +106,7 @@ public class LedgerApplication {
             System.out.println("5) Search by Vendor");
             System.out.println("0) Back - return to Ledger Menu");
             System.out.println("H) Home - return to  Report Menu");
-            System.out.print("Choose an option: ");
+            System.out.println("Choose an option: ");
             String choice = scanner.nextLine();
 
             switch (choice) {
@@ -123,7 +123,7 @@ public class LedgerApplication {
                     reportService.previousYear(ledgerService.getTransactions());
                     break;
                 case "5":
-                    System.out.print("Enter vendor name to search: ");
+                    System.out.println("Enter vendor name to search: ");
                     String vendor = scanner.nextLine();
                     reportService.searchByVendor(ledgerService.getTransactions(), vendor);
                     break;
