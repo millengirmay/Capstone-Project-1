@@ -24,6 +24,7 @@ public class ReportService {
         }
     }
     public void yearToDate(ArrayList<Transaction> transactions){
+        System.out.println("========**** YearToDate Transactions ****=======\n");
         LocalDate now = LocalDate.now();
         for(Transaction t : transactions){
             if(t.getDate().getYear() == now.getYear()){
@@ -32,6 +33,7 @@ public class ReportService {
         }
     }
     public void previousYear(ArrayList<Transaction> transactions){
+        System.out.println("========**** PreviousYear Transactions ****=======\n");
         LocalDate now = LocalDate.now();
         for(Transaction t : transactions){
             if(t.getDate().getYear() == now.minusYears(1).getYear()){
@@ -39,11 +41,14 @@ public class ReportService {
             }
         }
     }
-    public void searchByVendor(ArrayList<Transaction> transactions, String vendor){
-        for(Transaction t: transactions){
-            if(t.getVendor().equalsIgnoreCase(vendor)){
-                System.out.println(t);
+    public ArrayList<Transaction> searchByVendor(ArrayList<Transaction> transactions, String vendor){
+        ArrayList<Transaction> allTransactions = TransactionFileHandler.readTransaction();
+        ArrayList<Transaction> result = new ArrayList<>();
+        for (Transaction t : transactions) {
+            if (t.getVendor() != null && t.getVendor().trim().equalsIgnoreCase(vendor.trim())) {
+                result.add(t);
             }
         }
+        return result;
     }
 }

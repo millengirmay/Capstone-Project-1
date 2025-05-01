@@ -2,6 +2,7 @@ package AccountingLedgerApplication;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class LedgerApplication {
@@ -125,7 +126,15 @@ public class LedgerApplication {
                 case "5":
                     System.out.println("Enter vendor name to search: ");
                     String vendor = scanner.nextLine();
-                    reportService.searchByVendor(ledgerService.getTransactions(), vendor);
+                    ArrayList<Transaction> vendorResults = reportService.searchByVendor(ledgerService.getTransactions(), vendor);
+                    if (vendorResults.isEmpty()) {
+                        System.out.println("No transactions found for vendor: " + vendor);
+                    } else {
+                        System.out.println("Transactions for vendor: " + vendor);
+                        for (Transaction t : vendorResults) {
+                            System.out.println(t);
+                        }
+                    }
                     break;
                 case "0":
                     inReports = false; //This will exit reportMenu() and return to the Ledger Menu
