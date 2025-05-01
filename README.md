@@ -43,6 +43,16 @@ Access the Reports Menu to generate various reports or perform searches.
 
 ![choose the Custom Search](https://github.com/user-attachments/assets/f3ac0c1b-2e49-4055-aa9e-94a555a9b2d7)
 
+ Interesting Code Snippet
+The customSearch method allows users to filter transactions based on multiple optional criteria. Here's a simplified version:
 
+
+
+private static void customSearch(Scanner scanner, ArrayList<Transaction> transactions) {
+    // Prompt user for search criteria
+    // Parse inputs and handle empty entries
+    // Iterate through transactions and apply filters
+    // Display matching transactions
+}
 
 
