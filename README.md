@@ -33,6 +33,7 @@ View all entries, deposits only, or payments only.
 
 Access the Reports Menu to generate various reports or perform searches.
 
+
 ***Screenshots***
 
 ![Home Screen](https://github.com/user-attachments/assets/805d3ede-0759-40fe-95e5-4c01c687594e)
