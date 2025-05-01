@@ -25,38 +25,40 @@ public class LedgerApplication {
 
             switch (choice.toUpperCase()) {
                 case "D":
+                    //Prompt user for deposit details
                     System.out.println("Enter description: ");
                     String descriptionD = scanner.nextLine();
                     System.out.println("Enter vendor: ");
                     String vendorD = scanner.nextLine();
                     System.out.println("Enter amount: ");
                     double amountD = Double.parseDouble(scanner.nextLine());
+                    //Create and add deposit transaction
                     Transaction deposit = new Transaction(LocalDate.now(), LocalTime.now(), descriptionD, vendorD, amountD);
                     ledgerService.addDeposit(deposit);
                     System.out.println("Deposit added!");
                     break;
-
                 case "P":
+                    //Prompt user for payment details
                     System.out.println("Enter description: ");
                     String descriptionP = scanner.nextLine();
                     System.out.println("Enter vendor: ");
                     String vendorP = scanner.nextLine();
                     System.out.println("Enter amount: ");
                     double amountP = Double.parseDouble(scanner.nextLine());
+                    //Create and add payment transaction
                     Transaction payment = new Transaction(LocalDate.now(), LocalTime.now(), descriptionP, vendorP, -amountP);
                     ledgerService.addPayment(payment);
                     System.out.println("Payment added!");
                     break;
-
                 case "L":
+                    //Navigate to ledger menu
                     ledgerMenu(scanner, ledgerService, reportService);
                     break;
-
                 case "X":
+                    //Exit the application
                     options = false;
                     System.out.println("Goodbye!");
                     break;
-
                 default:
                     System.out.println("Invalid choice.");
             }
@@ -78,21 +80,26 @@ public class LedgerApplication {
 
             switch (choice.toUpperCase()) {
                 case "A":
+                    //Display all transactions
                     System.out.println("\n=*=*=*=*=*=*=*=*=*=*= All Entries =*=*=*=*=*=*=*=*=*=*=*=");
                     ledgerService.displayAllTransactions();
                     break;
                 case "D":
+                    //Display only deposit transactions
                     System.out.println("\n=*=*=*=*=*=*=*=*=*=*= Deposits =*=*=*=*=*=*=*=*=*=*=*=");
                     ledgerService.displayDeposits();
                     break;
                 case "P":
+                    //Display only payment transactions
                     System.out.println("\n=*=*=*=*=*=*=*=*=*=*= Payments =*=*=*=*=*=*=*=*=*=*=*=");
                     ledgerService.displayPayments();
                     break;
                 case "R":
+                    //Navigate to reports menu
                     reportMenu(scanner, ledgerService, reportService);
                     break;
                 case "H":
+                    //Return to home screen
                     inLedger = false;
                     break;
                 default:
@@ -113,24 +120,28 @@ public class LedgerApplication {
             System.out.println("5) Search by Vendor");
             System.out.println("6) Custom Search");
             System.out.println("0) Back - return to Ledger Menu");
-            System.out.println("H) Home - return to  Report Menu");
             System.out.println("Choose an option: ");
             String choice = scanner.nextLine();
 
             switch (choice) {
                 case "1":
+                    //Generate month-to-date report
                     reportService.monthToDate(ledgerService.getTransactions());
                     break;
                 case "2":
+                    //Generate previous month report
                     reportService.previousMonth(ledgerService.getTransactions());
                     break;
                 case "3":
+                    //Generate year-to-date report
                     reportService.yearToDate(ledgerService.getTransactions());
                     break;
                 case "4":
+                    //Generate previous year report
                     reportService.previousYear(ledgerService.getTransactions());
                     break;
                 case "5":
+                    //Search transactions by vendor
                     System.out.println("Enter vendor name to search: ");
                     String vendor = scanner.nextLine();
                     ArrayList<Transaction> vendorResults = reportService.searchByVendor(ledgerService.getTransactions(), vendor);
@@ -144,18 +155,19 @@ public class LedgerApplication {
                     }
                     break;
                 case "6":
+                    //Search transactions by different custom
                     customSearch(scanner, ledgerService.getTransactions());
                     break;
                 case "0":
+                    //Return to ledger menu
                     inReports = false; //This will exit reportMenu() and return to the Ledger Menu
                     break;
-                case "H":
-                    inReports = false;
                 default:
                     System.out.println("Invalid choice.");
             }
         }
     }
+    //Custom search method moved outside of reportMenu to avoid illegal start of expression error
         private static void customSearch(Scanner scanner, ArrayList<Transaction> transactions) {
             System.out.println("Enter start date (YYYY-MM-DD) or leave blank:");
             String startDateInput = scanner.nextLine();
