@@ -180,7 +180,7 @@ public class LedgerApplication {
             System.out.println("Enter amount or leave blank:");
             String amountInput = scanner.nextLine();
 
-            LocalDate startDate = startDateInput.isEmpty() ? null : LocalDate.parse(startDateInput);
+            LocalDate startDate = startDateInput.isEmpty() ? null : LocalDate.parse(startDateInput); //uses the ternary operator, which is a shortcut for an if-else statement
             LocalDate endDate = endDateInput.isEmpty() ? null : LocalDate.parse(endDateInput);
             String description = descriptionInput.isEmpty() ? null : descriptionInput.toLowerCase();
             String vendor = vendorInput.isEmpty() ? null : vendorInput.toLowerCase();
