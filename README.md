@@ -128,14 +128,12 @@ Problem-solving and user-centric design
 
 ***Screenshots***
 
-![Home Screen](https://github.com/user-attachments/assets/805d3ede-0759-40fe-95e5-4c01c687594e)
 
-![Home Screen   Ledger menu](https://github.com/user-attachments/assets/803a5c7b-e8aa-429d-9c9b-3d0b3c5dabd1)
+![Home screen   Ledger menu](https://github.com/user-attachments/assets/b5c980a3-4026-4b31-b779-f8993dc6ce63)
 
-![Ledger Menu   Reports Menu](https://github.com/user-attachments/assets/8d872c26-f3be-4380-9dd8-1d7b348046a9)
 
-![choose the Custom Search](https://github.com/user-attachments/assets/f3ac0c1b-2e49-4055-aa9e-94a555a9b2d7)
 
+![Ledger menu   Reports menu](https://github.com/user-attachments/assets/2eb908be-dff7-41fc-b270-14c0571188df)
 
 
 
