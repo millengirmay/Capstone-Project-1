@@ -66,8 +66,8 @@ public class LedgerApplication {
     }
 
     private static void ledgerMenu(Scanner scanner, LedgerService ledgerService, ReportService reportService) {
-        boolean inLedger = true;
-        while (inLedger) {
+        boolean ledgerMenuOptions = true;
+        while (ledgerMenuOptions) {
             System.out.println("\n=*=*=*=*=*=*=*=*=*=*= Ledger Menu =*=*=*=*=*=*=*=*=*=*=*=");
             System.out.println("-----------------------------------------------------------");
             System.out.println("A) All Entries");
@@ -100,7 +100,7 @@ public class LedgerApplication {
                     break;
                 case "H":
                     //Return to home screen
-                    inLedger = false;
+                    ledgerMenuOptions = false;
                     break;
                 default:
                     System.out.println("Invalid choice.");
@@ -109,8 +109,8 @@ public class LedgerApplication {
     }
 
     private static void reportMenu(Scanner scanner, LedgerService ledgerService, ReportService reportService) {
-        boolean inReports = true;
-        while (inReports) {
+        boolean reportsMenuOptions = true;
+        while (reportsMenuOptions) {
             System.out.println("\n=*=*=*=*=*=*=*=*=*=*= Reports Menu =*=*=*=*=*=*=*=*=*=*=*=");
             System.out.println("-----------------------------------------------------------");
             System.out.println("1) Month to Date");
@@ -160,7 +160,7 @@ public class LedgerApplication {
                     break;
                 case "0":
                     //Return to ledger menu
-                    inReports = false; //This will exit reportMenu() and return to the Ledger Menu
+                    reportsMenuOptions = false; //This will exit reportMenu() and return to the Ledger Menu
                     break;
                 default:
                     System.out.println("Invalid choice.");
