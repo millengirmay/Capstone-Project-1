@@ -151,6 +151,7 @@ private static void customSearch(Scanner scanner, ArrayList<Transaction> transac
     // Parse inputs and handle empty entries using ternary operators:
     // If user input is empty, assign null; otherwise, process the input.
     // Example: Convert description to lowercase only if it's not empty
+       // Syntax of Ternary Operator:  condition ? valueIfTrue : valueIfFalse;
     // String description = descriptionInput.isEmpty() ? null : descriptionInput.toLowerCase();
 
     // This logic is also applied to:
@@ -162,8 +163,8 @@ private static void customSearch(Scanner scanner, ArrayList<Transaction> transac
 
     // Display matching transactions
     
-    // Syntax of Ternary Operator:  condition ? valueIfTrue : valueIfFalse;
-    //String vendor = vendorInput.isEmpty() ? null : vendorInput.toLowerCase();
+ 
+    
     
 }
 
