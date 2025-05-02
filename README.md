@@ -48,19 +48,35 @@ Access the Reports Menu to generate various reports or perform searches.
 
 
 
- Interesting Code 
+ ****Interesting Code**** 
 
-The customSearch method allows users to filter transactions based on multiple optional criteria. Here's a simplified version:
+In the customSearch method, we use the ternary operator to simplify conditional logic when handling user input.  
+This compact syntax replaces longer if-else statements and helps keep the code clean and readable.
 
-    private static void customSearch(Scanner scanner, ArrayList<Transaction> transactions) {
- 
-        // Prompt user for search criteria
+Here's how the method works, with the ternary operator usage explained in the comments:
+
+private static void customSearch(Scanner scanner, ArrayList<Transaction> transactions) {
+
+    // Prompt user for search criteria
+
+    // Parse inputs and handle empty entries using ternary operators:
+    // If user input is empty, assign null; otherwise, process the input.
+    // Example: Convert description to lowercase only if it's not empty
+    // String description = descriptionInput.isEmpty() ? null : descriptionInput.toLowerCase();
+
+    // This logic is also applied to:
+    // - Dates: convert only if input is not blank
+    // - Vendor: convert to lowercase for case-insensitive match
+    // - Amount: parse to double only if input is provided
+
+    // Iterate through transactions and apply filters based on non-null values
+
+    // Display matching transactions
     
-        // Parse inputs and handle empty entries
+    // Syntax of Ternary Operator:  condition ? valueIfTrue : valueIfFalse;
+    //String vendor = vendorInput.isEmpty() ? null : vendorInput.toLowerCase();
     
-        // Iterate through transactions and apply filters
-    
-        // Display matching transactions
-    }
+}
+
 
 
