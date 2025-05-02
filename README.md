@@ -11,63 +11,61 @@ Key Functionalities
 1. Transaction Management
 
  -Add Deposit
-Users are prompted to enter:
+   Users are prompted to enter:
 
-Description: Brief explanation of the deposit
+    Description: Brief explanation of the deposit
 
-Vendor: Source of the income
+    Vendor: Source of the income
 
-Amount: Positive number representing funds added
+    Amount: Positive number representing funds added
 
-Automatically timestamps the entry with the current date and time.
+    Automatically timestamps the entry with the current date and time.
 
  -Make Payment (Debit)
-Users are prompted to enter:
+   Users are prompted to enter:
 
-Description: Purpose of the payment
+    Description: Purpose of the payment
 
-Vendor: Recipient of the funds
+    Vendor: Recipient of the funds
 
-Amount: Positive number recorded as a debit (displayed as a negative in the ledger)
+    Amount: Positive number recorded as a debit (displayed as a negative in the ledger)
 
-Like deposits, each payment is timestamped.
+    Like deposits, each payment is timestamped.
 
 2. Ledger Viewing and Filtering
-Users can choose to view:
+    Users can choose to view:
 
-All Ledger Entries: Chronological list of all transactions
+      All Ledger Entries: Chronological list of all transactions
 
-Deposits Only: Filters entries where amount is positive
+      Deposits Only: Filters entries where amount is positive
 
-Payments Only: Filters entries where amount is negative
+      Payments Only: Filters entries where amount is negative
 
 3. Reporting Features
 
-Month-to-Date: Displays all transactions from the beginning of the current month to the current date.
+     Month-to-Date: Displays all transactions from the beginning of the current month to the current date.
 
-Previous Month: Displays transactions from the full previous month.
+     Previous Month: Displays transactions from the full previous month.
 
-Year-to-Date: Shows transactions starting January 1st through today.
+     Year-to-Date: Shows transactions starting January 1st through today.
 
-Previous Year: Lists all transactions from the last calendar year.
+      Previous Year: Lists all transactions from the last calendar year.
 
 4 Transaction Search
 
-Search by Vendor: Allows users to input a vendor name and see all transactions involving that vendor.
+   Search by Vendor: Allows users to input a vendor name and see all transactions involving that vendor.
 
-Custom Search:
+   Custom Search: Users can apply one or more of the following filters:
 
-Users can apply one or more of the following filters:
+       Start Date and End Date
 
-Start Date and End Date
+       Description Keywords
 
-Description Keywords
+       Vendor
 
-Vendor
+       Amount
 
-Amount
-
-The program returns transactions matching all specified criteria.
+    The program returns transactions matching all specified criteria.
 
 ******User Interface Flow******
 When the application starts, users are presented with a Main Menu offering these options:
