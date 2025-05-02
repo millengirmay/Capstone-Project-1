@@ -76,6 +76,7 @@ public class LedgerApplication {
             System.out.println("R) Reports Menu");
             System.out.println("H) Home Screen");
             System.out.println("Choose an option: ");
+
             String choice = scanner.nextLine();
 
             switch (choice.toUpperCase()) {
@@ -121,6 +122,7 @@ public class LedgerApplication {
             System.out.println("6) Custom Search");
             System.out.println("0) Back - return to Ledger Menu");
             System.out.println("Choose an option: ");
+
             String choice = scanner.nextLine();
 
             switch (choice) {
@@ -178,6 +180,7 @@ public class LedgerApplication {
             System.out.println("Enter vendor name or leave blank:");
             String vendorInput = scanner.nextLine();
             System.out.println("Enter amount or leave blank:");
+
             String amountInput = scanner.nextLine();
 
             LocalDate startDate = startDateInput.isEmpty() ? null : LocalDate.parse(startDateInput); //uses the ternary operator, which is a shortcut for an if-else statement
@@ -186,8 +189,8 @@ public class LedgerApplication {
             String vendor = vendorInput.isEmpty() ? null : vendorInput.toLowerCase();
             Double amount = amountInput.isEmpty() ? null : Double.parseDouble(amountInput);
 
-            System.out.println("\n=*=*=*=*=*=*=*=*=*=*= Custom Search Results =*=*=*=*=*=*=*=*=*=*=*=");
-
+            System.out.println("=*=*=*=*=*=*=*=*=*=*= Custom Search Results =*=*=*=*=*=*=*=*=*=*=*=");
+            System.out.println("-----------------------------------------------------------");
             for (Transaction t : transactions) {
                 if ((startDate == null || !t.getDate().isBefore(startDate)) &&
                         (endDate == null || !t.getDate().isAfter(endDate)) &&

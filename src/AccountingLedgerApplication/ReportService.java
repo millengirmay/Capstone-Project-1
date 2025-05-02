@@ -6,7 +6,8 @@ import java.util.ArrayList;
 public class ReportService {
     //Display all transactions that occurred in the current month and year
     public void monthToDate(ArrayList<Transaction> transactions){
-        System.out.println("=========***** Month to Date Transactions *****========0=\n");
+        System.out.println("=========****** Month to Date Transactions ******=========");
+        System.out.println("-----------------------------------------------------------");
         LocalDate now = LocalDate.now();
         for(Transaction t: transactions){
             //Check if the transaction's month and year match the current month and year
@@ -17,7 +18,8 @@ public class ReportService {
     }
     //Displays all transactions that occurred in the previous month.
     public void previousMonth(ArrayList<Transaction> transactions){
-        System.out.println("=========***** Previous month Transactions *****=========\n");
+        System.out.println("=========***** Previous month Transactions *****=========");
+        System.out.println("-----------------------------------------------------------");
         LocalDate now = LocalDate.now();
         LocalDate previousMonth = now.minusMonths(1);
         for(Transaction t: transactions){
@@ -30,6 +32,7 @@ public class ReportService {
     //Displays all transactions that occurred in the current year.
     public void yearToDate(ArrayList<Transaction> transactions){
         System.out.println("=========***** YearToDate Transactions *****=========\n");
+        System.out.println("-----------------------------------------------------------");
         LocalDate now = LocalDate.now();
         for(Transaction t : transactions){
             //Check if the transaction's year matches the current year
@@ -40,7 +43,8 @@ public class ReportService {
     }
     //Displays all transactions that occurred in the previous year
     public void previousYear(ArrayList<Transaction> transactions){
-        System.out.println("=========***** PreviousYear Transactions *****=========\n");
+        System.out.println("==========****** PreviousYear Transactions ******==========");
+        System.out.println("-----------------------------------------------------------");
         LocalDate now = LocalDate.now();
         for(Transaction t : transactions){
             //Check if the transactions year matches the previous year
@@ -51,7 +55,8 @@ public class ReportService {
     }
     //Searches for transactions by vendor name, ignoring case and leading/trailing spaces
     public ArrayList<Transaction> searchByVendor(ArrayList<Transaction> transactions, String vendor){
-        System.out.println("=========***** Show Vendor Transactions *****=========\n");
+        System.out.println("==========****** Show Vendor Transactions ******==========");
+        System.out.println("-----------------------------------------------------------");
         ArrayList<Transaction> allTransactions = TransactionFileHandler.readTransaction();
         ArrayList<Transaction> result = new ArrayList<>();
         for (Transaction t : transactions) {

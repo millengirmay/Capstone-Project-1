@@ -16,10 +16,9 @@ public class LedgerService {
 
     //Adds a deposit transaction to the list and saves it to the file
     public void addDeposit(Transaction transaction){
-        transactions.add(transaction);       //Add to in memory list
+        transactions.add(transaction);      //Add to in memory list
         fileHandler.saveTransaction(transaction);     //persist to file
     }
-
     //Adds a payment transaction to the list and saves it to the file
     public void addPayment(Transaction transaction){
         transactions.add(transaction);   //Add to in memory list
