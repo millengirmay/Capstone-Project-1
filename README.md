@@ -48,7 +48,7 @@ Access the Reports Menu to generate various reports or perform searches.
 
 
 
- Interesting Code Snippet
+ Interesting Code 
 
 The customSearch method allows users to filter transactions based on multiple optional criteria. Here's a simplified version:
 
