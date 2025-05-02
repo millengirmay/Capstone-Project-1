@@ -1,10 +1,12 @@
    ********************Accounting Ledger Application********************
+
       
-Accounting Ledger Application – Overview
 Project Type:
-Command-Line Java Application
+
+Command-Line Java Application : A Java program that runs in the terminal or command prompt, without any graphical user interface (GUI).
 
 Purpose:
+
 This application is designed to help users manage personal or business financial transactions by tracking deposits and payments, generating detailed financial reports, and enabling transaction search and filtering—all through a clean, menu-driven command-line interface.
 
 Key Functionalities
@@ -35,21 +37,21 @@ Key Functionalities
 2. Ledger Viewing and Filtering
     Users can choose to view:
 
-      All Ledger Entries: Chronological list of all transactions
+       All Ledger Entries: Chronological list of all transactions
 
-      Deposits Only: Filters entries where amount is positive
+       Deposits Only: Filters entries where amount is positive
 
-      Payments Only: Filters entries where amount is negative
+       Payments Only: Filters entries where amount is negative
 
 3. Reporting Features
 
-     Month-to-Date: Displays all transactions from the beginning of the current month to the current date.
+       Month-to-Date: Displays all transactions from the beginning of the current month to the current date.
 
-     Previous Month: Displays transactions from the full previous month.
+       Previous Month: Displays transactions from the full previous month.
 
-     Year-to-Date: Shows transactions starting January 1st through today.
+       Year-to-Date: Shows transactions starting January 1st through today.
 
-      Previous Year: Lists all transactions from the last calendar year.
+       Previous Year: Lists all transactions from the last calendar year.
 
 4 Transaction Search
 
@@ -68,48 +70,49 @@ Key Functionalities
     The program returns transactions matching all specified criteria.
 
 ******User Interface Flow******
-When the application starts, users are presented with a Main Menu offering these options:
+When the application starts, users are presented with a Main Menu (Home Screen) offering these options:
 
-Add Deposit
+ -Add Deposit
 
-Make Payment (Debit)
+ -Make Payment (Debit)
 
-Ledger – Opens a sub-menu:
+ -Ledger – Opens a sub-menu:
 
-View All Entries
+    View All Entries
 
-View Deposits Only
+    View Deposits Only
 
-View Payments Only
+    View Payments Only
 
-Access Reports
+    Access Reports
 
-Perform Search
+    Perform Search
 
-Exit – Safely terminates the application
+ -Exit – Safely terminates the application
 
 *****Architecture and Code Highlights*****
 
 -Date Handling:
 
-Uses LocalDateTime and DateTimeFormatter for accurate date recording and formatting.
+    Uses LocalDateTime and DateTimeFormatter for accurate date recording and formatting.
 
-Date filtering logic parses string inputs and compares them to transaction timestamps.
+    Date filtering logic parses string inputs and compares them to transaction timestamps.
 
 -Data Storage:
 
-Transactions are stored in a structured list (e.g., ArrayList<Transaction>) during runtime.
+    Transactions are stored in a structured  ArrayList<Transaction>) during runtime.
 
-Optionally, a CSV file is used for persistent storage and loading data.
+    Optionally, a CSV file is used for persistent storage and loading data.
 
 -Error Handling:
 
-Input validations ensure correct number formats and prevent crashes from invalid entries.
+    Input validations ensure correct number formats and prevent crashes from invalid entries.
 
-Clear prompts and re-tries improve user experience.
+    Clear prompts and re-tries improve user experience.
 
 *****Why This Project Matters*****
-This application simulates a real-world tool used by freelancers, small businesses, or even individuals looking to manage their finances manually. It demonstrates your grasp of:
+
+This application simulates a real-world tool used by freelancers, small businesses, or even individuals looking to manage their finances manually. 
 
 Core Java concepts (loops, conditionals, classes, collections)
 
