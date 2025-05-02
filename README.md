@@ -53,7 +53,7 @@ Key Functionalities
 
        Previous Year: Lists all transactions from the last calendar year.
 
-4 Transaction Search
+4. Transaction Search
 
    Search by Vendor: Allows users to input a vendor name and see all transactions involving that vendor.
 
