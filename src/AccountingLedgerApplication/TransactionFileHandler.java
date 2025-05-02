@@ -42,7 +42,7 @@ public class TransactionFileHandler {
             reader.close();  //Close the reader to free system resources
         } catch(IOException e){
             //Handle any IO exceptions that may occur
-            System.out.println("Error loading transactions: " + e.getMessage());
+            System.out.println("Error loading transactions");
         }
         return transactions;
     }
@@ -56,7 +56,7 @@ public class TransactionFileHandler {
             //Add a new line after the transaction
             writer.newLine();
         } catch (IOException e) {
-            System.out.println("Error saving transaction: " + e.getMessage());
+            System.out.println("Error saving transaction");
         }
     }
 }
