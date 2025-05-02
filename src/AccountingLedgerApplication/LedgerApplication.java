@@ -194,6 +194,7 @@ public class LedgerApplication {
 
             System.out.println("=*=*=*=*=*=*=*=*=*=*= Custom Search Results =*=*=*=*=*=*=*=*=*=*=*=");
             System.out.println("-----------------------------------------------------------");
+            // Filter transactions based on non-null criteria
             for (Transaction t : transactions) {
                 if ((startDate == null || !t.getDate().isBefore(startDate)) &&
                         (endDate == null || !t.getDate().isAfter(endDate)) &&
