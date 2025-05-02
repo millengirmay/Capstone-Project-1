@@ -139,7 +139,7 @@ Problem-solving and user-centric design
 
  ****Interesting Code**** 
 
-In the customSearch method, we use the ternary operator to simplify conditional logic when handling user input.  
+In the customSearch method, I use the ternary operator to simplify conditional logic when handling user input.  
 This compact syntax replaces longer if-else statements and helps keep the code clean and readable.
 
 Here's how the method works, with the ternary operator usage explained in the comments:
