@@ -10,6 +10,7 @@ public class Transaction {
     private String vendor;
     private double amount;
 
+    //Constructor
     public Transaction(LocalDate date, LocalTime time, String description, String vendor, double amount ){
         this.date = date;
         this.time = time;
@@ -18,6 +19,7 @@ public class Transaction {
         this.amount = amount;
     }
 
+    //Getter method
     public LocalDate getDate() {
         return date;
     }
