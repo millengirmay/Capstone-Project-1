@@ -70,11 +70,11 @@ public class LedgerApplication {
         while (ledgerMenuOptions) {
             System.out.println("\n=*=*=*=*=*=*=*=*=*=*= Ledger Menu =*=*=*=*=*=*=*=*=*=*=*=");
             System.out.println("-----------------------------------------------------------");
-            System.out.println("A) All Entries");
-            System.out.println("D) Deposits Only");
-            System.out.println("P) Payments Only");
-            System.out.println("R) Reports Menu");
-            System.out.println("H) Home Screen");
+            System.out.println("[A]: All Entries");
+            System.out.println("[D]: Deposits Only");
+            System.out.println("[P]: Payments Only");
+            System.out.println("[R]: Reports Menu");
+            System.out.println("[H]: Home Screen");
             System.out.println("Choose an option: ");
 
             String choice = scanner.nextLine();
@@ -117,13 +117,13 @@ public class LedgerApplication {
         while (reportsMenuOptions) {
             System.out.println("\n=*=*=*=*=*=*=*=*=*=*= Reports Menu =*=*=*=*=*=*=*=*=*=*=*=");
             System.out.println("-----------------------------------------------------------");
-            System.out.println("1) Month to Date");
-            System.out.println("2) Previous Month");
-            System.out.println("3) Year to Date");
-            System.out.println("4) Previous Year");
-            System.out.println("5) Search by Vendor");
-            System.out.println("6) Custom Search");
-            System.out.println("0) Back - return to Ledger Menu");
+            System.out.println("[1]: Month to Date");
+            System.out.println("[2]: Previous Month");
+            System.out.println("[3]: Year to Date");
+            System.out.println("[4]: Previous Year");
+            System.out.println("[5]: Search by Vendor");
+            System.out.println("[6]: Custom Search");
+            System.out.println("[0]: Back - return to Ledger Menu");
             System.out.println("Choose an option: ");
 
             String choice = scanner.nextLine();
