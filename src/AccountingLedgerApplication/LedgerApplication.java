@@ -82,17 +82,20 @@ public class LedgerApplication {
             switch (choice.toUpperCase()) {
                 case "A":
                     //Display all transactions
-                    System.out.println("\n=*=*=*=*=*=*=*=*=*=*= All Entries =*=*=*=*=*=*=*=*=*=*=*=");
+                    System.out.println("=*=*=*=*=*=*=*=*=*=*= All Entries =*=*=*=*=*=*=*=*=*=*=*=");
+                    System.out.println("-----------------------------------------------------------");
                     ledgerService.displayAllTransactions();
                     break;
                 case "D":
                     //Display only deposit transactions
-                    System.out.println("\n=*=*=*=*=*=*=*=*=*=*= Deposits =*=*=*=*=*=*=*=*=*=*=*=");
+                    System.out.println("=*=*=*=*=*=*=*=*=*=*= Deposits =*=*=*=*=*=*=*=*=*=*=*=");
+                    System.out.println("-----------------------------------------------------------");
                     ledgerService.displayDeposits();
                     break;
                 case "P":
                     //Display only payment transactions
-                    System.out.println("\n=*=*=*=*=*=*=*=*=*=*= Payments =*=*=*=*=*=*=*=*=*=*=*=");
+                    System.out.println("=*=*=*=*=*=*=*=*=*=*= Payments =*=*=*=*=*=*=*=*=*=*=*=");
+                    System.out.println("-----------------------------------------------------------");
                     ledgerService.displayPayments();
                     break;
                 case "R":
