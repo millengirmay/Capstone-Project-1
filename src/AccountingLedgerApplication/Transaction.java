@@ -41,6 +41,7 @@ public class Transaction {
     }
 
      public String toString(){
+
         return date + "|" + time + "|" + description + "|" + vendor + "|" + amount;
      }
 
