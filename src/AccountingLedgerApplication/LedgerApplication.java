@@ -16,10 +16,10 @@ public class LedgerApplication {
         while (options) {
             System.out.println("\n=*=*=*=*=*=*=*=*=*=*= Home Screen =*=*=*=*=*=*=*=*=*=*=*=");
             System.out.println("-----------------------------------------------------------");
-            System.out.println("D) Add Deposit");
-            System.out.println("P) Make Payment (Debit)");
-            System.out.println("L) Ledger");
-            System.out.println("X) Exit");
+            System.out.println("[D]: Add Deposit");
+            System.out.println("[P]: Make Payment (Debit)");
+            System.out.println("[L]: Ledger");
+            System.out.println("[X]: Exit");
             System.out.println("Choose an option: ");
             String choice = scanner.nextLine();
 
